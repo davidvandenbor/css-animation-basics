@@ -1,4 +1,4 @@
-# CSS Animations Basics
+# CSS Animation Basics
 
 Bekijk en speel met de code live op **CodeSandBox** > [click here!](https://codesandbox.io/s/github/davidvandenbor/css-animation-basics)
 
