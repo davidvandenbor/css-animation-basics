@@ -2,13 +2,9 @@
 .circle {
     background:                     red;
     position:                       relative;
-
-    /* = onderstaande nodig als je left/top gebruikt voor je bewegingen in plaats van transforms */
-    width:                          100px;
-    height:                         100px;
-    border-radius:                  50%;
-
-    /* hieronder geven we aan welke animatie moet afspelen voor dit HTML element! */
+    /* hieronder geven we aan:
+     WELKE animatie (keyframes set) moet afspelen 
+     en HOE die afgespeeld moet worden */
     animation-name:                 example2;
     animation-duration:             3s;
     animation-direction:            alternate;
@@ -28,7 +24,7 @@
 }
 
 /* Hieronder worden CSS TRANSITIONS
- in plaats van keyframe animations gebruikt.
+ in plaats van KEYFRAME animations gebruikt.
  Weet je het verschil?
  */
 
@@ -41,45 +37,6 @@
 
 /* ---------- DE ANIMATIES! --------------------------------------------------------------- */
 
-/*
- Je kan op twee manier objecten laten bewegen:
- 1. met "position:absolute" en "top/left"
- 2. met CSS transforms
- methode 2 is beter voor video/rendering performance,
- je videokaart speelt de animaties af in plaats van je
- processor, zodat je vloeiendere animaties krijgt.
-Dus je voorkeur moet uitgaan naar EXAMPLE 2, dus werken 
-met transform (translateX, translateY enz.)
-
- */
-
-@keyframes example1 {
-    0% {
-        background-color:       red;
-        left:                   0px;
-        top:                    0px;
-    }
-    25% {
-        background-color:       purple;
-        left:                   300px;
-        top:                    0px;
-    }
-    50% {
-        background-color:       blue;
-        left:                   300px;
-        top:                    200px;
-    }
-    75% {
-        background-color:       green;
-        left:                   0px;
-        top:                    200px;
-    }
-    100% {
-        background-color:       red;
-        left:                   0px;
-        top:                    0px;
-    }
-}
 
 @keyframes example2 {
     0% {
@@ -107,7 +64,12 @@ met transform (translateX, translateY enz.)
     }
 }
 
-/* Je kan standaard CSS transitions gebruiken om mouseover animaties automatisch te laten plaatsvinden. Maar je kan ook keyframe CSS animaties maken, zodat je complexere animaties voor je mouseovers kan bedenken!! Testje: vervang voor de zwarte button de simpele :HOVER animatie met de KEYFRAME animaties hieronder! */
+/* Je kan standaard CSS transitions gebruiken 
+om mouseover animaties automatisch te laten plaatsvinden. 
+Maar je kan ook keyframe CSS animaties maken, 
+zodat je complexere animaties voor je mouseovers kan bedenken!! 
+Testje: vervang voor de zwarte button de simpele :HOVER animatie 
+met de KEYFRAME animaties hieronder! */
 
 @keyframes out {
     from {
